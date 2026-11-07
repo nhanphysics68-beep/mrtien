@@ -604,7 +604,7 @@
         // Số con muỗi bắt được MỖI LẦN đập (1 → 9) — chọn trong HUD, nhớ lại giữa các lần mở trang.
         let soMuoiMoiLanDap = 1;
         try {
-            const daLuuSoMuoi = parseInt(localStorage.getItem("DAP_MUOI_SOLUONG_MOI_LAN_V1"), 10);
+            const daLuuSoMuoi = parseInt(localStorage.getItem("DAP_MUOI_TIEN_SOLUONG_MOI_LAN_V1"), 10);
             if (daLuuSoMuoi >= 1 && daLuuSoMuoi <= 9) soMuoiMoiLanDap = daLuuSoMuoi;
         } catch (e) {}
 
@@ -672,7 +672,7 @@
          */
         function loadSavedStudents() {
             try {
-                const saved = localStorage.getItem("DAP_MUOI_STUDENTS_V1");
+                const saved = localStorage.getItem("DAP_MUOI_TIEN_STUDENTS_V1");
                 if (saved) {
                     const parsed = JSON.parse(saved);
                     if (Array.isArray(parsed) && parsed.length > 0) {
@@ -690,7 +690,7 @@
 
         function saveStudentsToStorage() {
             try {
-                localStorage.setItem("DAP_MUOI_STUDENTS_V1", JSON.stringify(allStudents));
+                localStorage.setItem("DAP_MUOI_TIEN_STUDENTS_V1", JSON.stringify(allStudents));
             } catch (e) {
                 console.warn("Không thể lưu LocalStorage:", e);
             }
@@ -699,21 +699,21 @@
         /**
          * NHIỀU LỚP / NHÓM — Thầy có thể tự thêm nhiều lớp/nhóm (lớp đang dạy thêm, nhóm bồi
          * dưỡng, đội tuyển...) với danh sách học sinh RIÊNG, lưu trên trình duyệt này.
-         * lopDangChon = '' nghĩa là đang dùng "Danh sách mặc định" (lưu ở DAP_MUOI_STUDENTS_V1);
+         * lopDangChon = '' nghĩa là đang dùng "Danh sách mặc định" (lưu ở DAP_MUOI_TIEN_STUDENTS_V1);
          * khác '' là TÊN 1 lớp tự thêm trong dsLop.
          */
         let dsLop = [];
         let lopDangChon = '';
         try {
-            const dsLopDaLuu = JSON.parse(localStorage.getItem("DAP_MUOI_DSLOP_V1") || "[]");
+            const dsLopDaLuu = JSON.parse(localStorage.getItem("DAP_MUOI_TIEN_DSLOP_V1") || "[]");
             if (Array.isArray(dsLopDaLuu)) dsLop = dsLopDaLuu.filter(t => typeof t === "string" && t.trim());
-            lopDangChon = localStorage.getItem("DAP_MUOI_LOPDANGCHON_V1") || '';
+            lopDangChon = localStorage.getItem("DAP_MUOI_TIEN_LOPDANGCHON_V1") || '';
             if (lopDangChon && !dsLop.includes(lopDangChon)) lopDangChon = ''; // lớp đã lưu không còn tồn tại nữa
         } catch (e) {}
 
-        function dmKhoaHocSinhLop(tenLop) { return "DAP_MUOI_HOCSINH_LOP__" + tenLop; }
-        function saveDsLop() { try { localStorage.setItem("DAP_MUOI_DSLOP_V1", JSON.stringify(dsLop)); } catch (e) {} }
-        function saveLopDangChon() { try { localStorage.setItem("DAP_MUOI_LOPDANGCHON_V1", lopDangChon); } catch (e) {} }
+        function dmKhoaHocSinhLop(tenLop) { return "DAP_MUOI_TIEN_HOCSINH_LOP__" + tenLop; }
+        function saveDsLop() { try { localStorage.setItem("DAP_MUOI_TIEN_DSLOP_V1", JSON.stringify(dsLop)); } catch (e) {} }
+        function saveLopDangChon() { try { localStorage.setItem("DAP_MUOI_TIEN_LOPDANGCHON_V1", lopDangChon); } catch (e) {} }
 
         function renderDsLop() {
             const sel = document.getElementById("dm-chon-lop");
@@ -733,7 +733,7 @@
             if (!lopDangChon) {
                 // Quay lại danh sách mặc định đã lưu riêng trên máy này
                 let ds = [];
-                try { ds = JSON.parse(localStorage.getItem("DAP_MUOI_STUDENTS_V1") || "[]"); } catch (e) {}
+                try { ds = JSON.parse(localStorage.getItem("DAP_MUOI_TIEN_STUDENTS_V1") || "[]"); } catch (e) {}
                 allStudents = Array.isArray(ds) && ds.length ? ds : [...SAMPLE_PRESETS.class30];
             } else {
                 // Lớp tự thêm: dùng đúng danh sách đã lưu riêng cho lớp đó
@@ -1780,7 +1780,7 @@
         // Bấm để đổi số con muỗi bắt được mỗi lần đập: 1 -> 2 -> ... -> 9 -> 1
         function cycleCatchCount() {
             soMuoiMoiLanDap = soMuoiMoiLanDap >= 9 ? 1 : soMuoiMoiLanDap + 1;
-            try { localStorage.setItem("DAP_MUOI_SOLUONG_MOI_LAN_V1", String(soMuoiMoiLanDap)); } catch (e) {}
+            try { localStorage.setItem("DAP_MUOI_TIEN_SOLUONG_MOI_LAN_V1", String(soMuoiMoiLanDap)); } catch (e) {}
             capNhatNhanSoMuoi();
         }
         function capNhatNhanSoMuoi() {
