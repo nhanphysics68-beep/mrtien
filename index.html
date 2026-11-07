@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THẦY BÙI ĐỨC TIẾN VÀ BẦY MUỖI - Game Gọi Tên Học Sinh Ngẫu Nhiên</title>
+    <title>MR TIẾN VÀ BẦY MUỖI - Game Gọi Tên Học Sinh Ngẫu Nhiên</title>
     <!-- Tích hợp Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Tích hợp Google Fonts: Baloo 2 & Be Vietnam Pro -->
@@ -110,7 +110,7 @@
                 </div>
                 <div>
                     <h1 class="font-game font-extrabold text-lg sm:text-2xl leading-none text-amber-400 tracking-wide">
-                        THẦY BÙI ĐỨC TIẾN VÀ BẦY MUỖI
+                        MR TIẾN VÀ BẦY MUỖI
                     </h1>
                     <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-300 mt-1">
                         <span class="flex items-center gap-1.5">
@@ -186,7 +186,7 @@
             <!-- Gợi ý tương tác -->
             <div id="hint-banner" class="px-4 py-1 rounded-full bg-slate-900/75 backdrop-blur-md border border-white/10 text-amber-200 text-xs font-medium shadow flex items-center gap-2">
                 <i class="fa-solid fa-wand-magic-sparkles text-amber-400"></i>
-                <span>Bấm nút bên dưới, nhấn phím <strong>SPACE</strong>, hoặc <strong>Click trực tiếp lên màn hình</strong> để Thầy Bùi Đức Tiến đập muỗi!</span>
+                <span>Bấm nút bên dưới, nhấn phím <strong>SPACE</strong>, hoặc <strong>Click trực tiếp lên màn hình</strong> để Mr Tiến đập muỗi!</span>
             </div>
 
             <!-- Nút hành động chính -->
@@ -246,7 +246,7 @@
                 <!-- Huy hiệu BỐP! -->
                 <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-rose-500/20 border border-rose-400/40 text-rose-300 font-game font-bold text-sm uppercase tracking-wider mb-3">
                     <i class="fa-solid fa-hands-clapping text-amber-300"></i>
-                    <span>BỐP!! THẦY BÙI ĐỨC TIẾN ĐÃ CHỘP TRÚNG!</span>
+                    <span>BỐP!! MR TIẾN ĐÃ CHỘP TRÚNG!</span>
                 </div>
                 <div id="winner-count-badge" class="text-xs font-bold text-rose-300 -mt-1 mb-1"></div>
 
@@ -281,7 +281,7 @@
                 </div>
 
                 <p id="winner-invite-text" class="text-slate-400 text-xs sm:text-sm font-medium mt-3">
-                    Xin mời học sinh có tên trên chú muỗi này đứng dậy trả lời câu hỏi của Thầy Bùi Đức Tiến:
+                    Xin mời học sinh có tên trên chú muỗi này đứng dậy trả lời câu hỏi của Mr Tiến:
                 </p>
 
                 <!-- TÊN HỌC SINH NỔI BẬT -->
@@ -293,7 +293,7 @@
 
                 <!-- Câu nói hài hước ngẫu nhiên -->
                 <p id="winner-funny-quote" class="text-xs sm:text-sm italic text-sky-300 mb-6">
-                    "Bay lượn vòng vòng quanh trán Thầy Bùi Đức Tiến nãy giờ, cuối cùng cũng bị thầy chộp trúng nhé!"
+                    "Bay lượn vòng vòng quanh trán Mr Tiến nãy giờ, cuối cùng cũng bị thầy chộp trúng nhé!"
                 </p>
 
                 <!-- 2 Lựa chọn sau khi gọi tên -->
@@ -322,7 +322,7 @@
                 <div class="flex items-center gap-2.5">
                     <i class="fa-solid fa-users-viewfinder text-amber-400 text-xl"></i>
                     <div>
-                        <h3 class="font-game font-bold text-xl text-white leading-none">Quản Lý Danh Sách Bầy Muỗi (Lớp Của Thầy Bùi Đức Tiến)</h3>
+                        <h3 class="font-game font-bold text-xl text-white leading-none">Quản Lý Danh Sách Bầy Muỗi (Lớp Của Mr Tiến)</h3>
                         <p id="modal-sync-status" class="text-xs mt-0.5">—</p>
                     </div>
                 </div>
@@ -353,7 +353,7 @@
                     <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Nạp nhanh danh sách mẫu:</span>
                     <div class="flex flex-wrap gap-2">
                         <button type="button" onclick="loadSamplePreset('class30')" class="px-3 py-1.5 rounded-lg bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-400/30 text-indigo-300 text-xs font-bold transition-all">
-                            Lớp mẫu 30 HS
+                            Group 1 &rarr; 8
                         </button>
                         <button type="button" onclick="loadSamplePreset('class15')" class="px-3 py-1.5 rounded-lg bg-sky-500/20 hover:bg-sky-500/30 border border-sky-400/30 text-sky-300 text-xs font-bold transition-all">
                             Nhóm 15 HS
@@ -401,14 +401,7 @@
          * DANH SÁCH MẪU MẶC ĐỊNH
          */
         const SAMPLE_PRESETS = {
-            class30: [
-                "Nguyễn Minh An", "Trần Bảo Anh", "Lê Hoàng Bách", "Phạm Ngọc Bích", "Võ Quốc Bảo",
-                "Đặng Tuấn Cường", "Bùi Khánh Duy", "Hoàng Thùy Dương", "Ngô Hải Đăng", "Đỗ Gia Hân",
-                "Hồ Quang Hiếu", "Phan Thanh Huyền", "Vũ Minh Khang", "Lý Bảo Khánh", "Trương Minh Khôi",
-                "Nguyễn Phương Linh", "Trần Nhật Minh", "Lê Trà My", "Phạm Hoàng Nam", "Võ Bảo Ngọc",
-                "Đặng Khôi Nguyên", "Bùi Thảo Nhi", "Hoàng Minh Nhật", "Ngô Thiên Phúc", "Đỗ Minh Quân",
-                "Hồ Như Quỳnh", "Phan Thanh Sơn", "Vũ Anh Thư", "Lý Quốc Trung", "Trương Khánh Vy"
-            ],
+            class30: Array.from({ length: 8 }, (_, i) => `Group ${i + 1}`),
             class15: [
                 "Minh An", "Bảo Anh", "Hoàng Bách", "Quốc Bảo", "Khánh Duy",
                 "Hải Đăng", "Gia Hân", "Minh Khang", "Minh Khôi", "Phương Linh",
@@ -418,9 +411,9 @@
         };
 
         const FUNNY_QUOTES = [
-            "\"Bay vo ve sát tai Thầy Bùi Đức Tiến nãy giờ, cuối cùng cũng bị hai tay thầy chộp gọn nhé!\"",
-            "\"Chúc mừng em đã được Thầy Bùi Đức Tiến gọi tên trả lời câu hỏi! Xin mời em tỏa sáng!\"",
-            "\"Một pha vung 2 tay tốc độ ánh sáng của Thầy Bùi Đức Tiến! Mời em trả lời câu hỏi nhé!\"",
+            "\"Bay vo ve sát tai Mr Tiến nãy giờ, cuối cùng cũng bị hai tay thầy chộp gọn nhé!\"",
+            "\"Chúc mừng em đã được Mr Tiến gọi tên trả lời câu hỏi! Xin mời em tỏa sáng!\"",
+            "\"Một pha vung 2 tay tốc độ ánh sáng của Mr Tiến! Mời em trả lời câu hỏi nhé!\"",
             "\"Chú muỗi bay lượn nghệ thuật nhất trong bầy muỗi hôm nay đã thuộc về em!\"",
             "\"BỐP! Không trượt phát nào! Cả lớp cho bạn một tràng pháo tay khích lệ nào!\""
         ];
@@ -1161,12 +1154,12 @@
             ctx.roundRect(boardX, boardY, boardW, boardH, 10);
             ctx.fill();
 
-            // Chữ viết phấn nổi bật trên bảng xanh phía sau Thầy Bùi Đức Tiến
+            // Chữ viết phấn nổi bật trên bảng xanh phía sau Mr Tiến
             ctx.save();
             ctx.textAlign = "center";
             ctx.fillStyle = "rgba(255, 255, 255, 0.88)";
             ctx.font = "800 32px 'Baloo 2', sans-serif";
-            ctx.fillText("THẦY BÙI ĐỨC TIẾN VÀ BẦY MUỖI", w / 2, boardY + 48);
+            ctx.fillText("MR TIẾN VÀ BẦY MUỖI", w / 2, boardY + 48);
 
             ctx.textAlign = "left";
             ctx.fillStyle = "rgba(255, 255, 255, 0.22)";
@@ -1195,7 +1188,7 @@
 
             ctx.save();
 
-            // 1. Thân áo sơ mi xanh nhạt lịch sự của Thầy Bùi Đức Tiến
+            // 1. Thân áo sơ mi xanh nhạt lịch sự của Mr Tiến
             ctx.fillStyle = "#bae6fd";
             ctx.beginPath();
             ctx.roundRect(tx - 95, ty - 20, 190, 145, [45, 45, 10, 10]);
@@ -1214,7 +1207,7 @@
             ctx.fill();
             ctx.stroke();
 
-            // Cà vạt đỏ nổi bật của Thầy Bùi Đức Tiến
+            // Cà vạt đỏ nổi bật của Mr Tiến
             ctx.fillStyle = "#e11d48";
             ctx.beginPath();
             ctx.moveTo(tx - 10, ty - 12);
@@ -1225,7 +1218,7 @@
             ctx.closePath();
             ctx.fill();
 
-            // Bảng tên nhỏ "Thầy Bùi Đức Tiến" cài trên ngực áo
+            // Bảng tên nhỏ "Mr Tiến" cài trên ngực áo
             ctx.fillStyle = "#fef08a";
             ctx.strokeStyle = "#b45309";
             ctx.lineWidth = 2;
@@ -1237,7 +1230,7 @@
             ctx.font = "bold 10px 'Be Vietnam Pro', sans-serif";
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
-            ctx.fillText("Thầy Bùi Đức Tiến", tx + 53, ty + 31);
+            ctx.fillText("Mr Tiến", tx + 53, ty + 31);
 
             // 2. Cổ và Đầu Ông Thầy
             ctx.fillStyle = "#fed7aa";
@@ -1375,7 +1368,7 @@
             const rh = teacher.rightHand;
 
             ctx.save();
-            // Vẽ ống tay áo sơ mi xanh nhạt nối từ vai Thầy Bùi Đức Tiến tới 2 bàn tay
+            // Vẽ ống tay áo sơ mi xanh nhạt nối từ vai Mr Tiến tới 2 bàn tay
             ctx.strokeStyle = "#7dd3fc";
             ctx.lineWidth = 24;
             ctx.lineCap = "round";
@@ -1629,8 +1622,8 @@
 
             const loiMoi = document.getElementById("winner-invite-text");
             if (loiMoi) loiMoi.textContent = ds.length === 1
-                ? "Xin mời học sinh có tên trên chú muỗi này đứng dậy trả lời câu hỏi của Thầy Bùi Đức Tiến:"
-                : `Xin mời ${ds.length} học sinh có tên trên các chú muỗi này đứng dậy trả lời câu hỏi của Thầy Bùi Đức Tiến:`;
+                ? "Xin mời học sinh có tên trên chú muỗi này đứng dậy trả lời câu hỏi của Mr Tiến:"
+                : `Xin mời ${ds.length} học sinh có tên trên các chú muỗi này đứng dậy trả lời câu hỏi của Mr Tiến:`;
 
             const quote = FUNNY_QUOTES[Math.floor(Math.random() * FUNNY_QUOTES.length)];
             document.getElementById("winner-funny-quote").textContent = quote;
